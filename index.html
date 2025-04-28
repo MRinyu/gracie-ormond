@@ -117,6 +117,16 @@ header p {
   color: #ff4444;
   text-decoration: underline;
 }
+    section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: none;
+}
     
   </style>
 
@@ -270,5 +280,21 @@ header p {
   <p>© 2025 Gracie Jiu-Jitsu Ormond. All rights reserved.</p>
 </footer>
 
+  <script>
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+    </script>
+  
 </body>
 </html>
