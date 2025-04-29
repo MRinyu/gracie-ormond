@@ -127,6 +127,16 @@ section.visible {
   opacity: 1;
   transform: none;
 }
+    header h1, header p {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+header.loaded h1, header.loaded p {
+  opacity: 1;
+  transform: scale(1);
+}
     
   </style>
 
@@ -293,6 +303,9 @@ section.visible {
 
   sections.forEach(section => {
     observer.observe(section);
+  });
+    window.addEventListener('load', () => {
+    document.querySelector('header').classList.add('loaded');
   });
     </script>
   
