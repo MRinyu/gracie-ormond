@@ -137,12 +137,26 @@ header.loaded h1, header.loaded p {
   opacity: 1;
   transform: scale(1);
 }
+
+    @media (max-width: 768px) {
+  div[style*="position: fixed"] {
+    display: none;
+  }
+}
     
   </style>
 
 </head>
 
 <body>
+  
+  <div style="position: fixed; top: 50%; left: 10px; transform: translateY(-50%); z-index: 999;">
+    <img src="images/2-01.jpg" alt="John-Michael Logo" style="width: 80px; opacity: 0.6;">
+  </div>
+
+  <div style="position: fixed; top: 50%; right: 10px; transform: translateY(-50%); z-index: 999;">
+    <img src="images/1-01.jpg" alt="Chet Quint Logo" style="width: 80px; opacity: 0.6;">
+  </div>
   
 <nav style="background: #222; padding: 10px 20px; display: flex; justify-content: center; gap: 20px;">
   <a href="#schedule">Schedule</a>
@@ -161,15 +175,6 @@ header.loaded h1, header.loaded p {
   <h2>Welcome to Gracie Jiu-Jitsu Ormond</h2>
   <p>Discover authentic Gracie Jiu-Jitsu in a welcoming, beginner-friendly environment. Whether you're new to the art or a seasoned practitioner, your journey starts here — and your first class is on us!</p>
 </section>
-  
-  <section style="text-align: center; background: #fff; padding: 40px 20px;">
-  <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #222;">Meet Our Professors</h2>
-  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-    <img src="images/2-01.jpg" alt="Professor John-Michael Logo" style="width: 150px; height: 150px; object-fit: contain; border-radius: 10px;">
-    <img src="images/1-01.jpg" alt="Professor Chet Logo" style="width: 150px; height: 150px; object-fit: contain; border-radius: 10px;">
-  </div>
-</section>
-  
   <section id="schedule">
   <h2>Class Schedule</h2>
 
